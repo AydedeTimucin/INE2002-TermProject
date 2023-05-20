@@ -1,0 +1,19 @@
+			The country codes with their mean GDP per capita between 1990-2019
+
+IN         SD         NG         EG         MA         NA         IR         PE         CN         TH         CU 
+  984.9006  1110.2067  1435.0574  1855.9785  2282.6366  3704.8919  3738.5503  3835.8772  3891.8860  3957.6514  4701.1503 
+        VE         BR         TR         RU         MX         AR         PL         CL         EE         SA         PT 
+ 6491.3871  6516.7778  7020.5841  7067.5177  7812.1234  8584.6401  8887.3730  9123.0971 13493.2296 14377.5929 17233.3629 
+        GR         KR         NZ         IT         IL         CA         GB         DE         FI         JP         AU 
+18302.9164 19519.4456 27673.9099 28994.4807 29693.2956 35261.6305 35266.2465 35987.6379 37502.9135 37969.4232 38094.8236 
+        AT         US         QA 
+38168.8011 43978.4956 47714.2508 
+
+				Five Number Summary and Additional Statistics
+
+Min.   1st Qu.  Median  3rd Qu.  Max. 			Mean     Std	   IQR
+984.9  3941.2   9005.2  31085.4  47714.2 		17006.5	 14943.91  27144.2
+
+According to the IQR rule for outliers, countries in the range of (Q1 - 1.5 * IQR, Q3 + 1.5 * IQR) are outliers. This range is (-42.686.9, 71801.7), so this distribution has no outliers.
+
+ 

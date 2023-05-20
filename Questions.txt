@@ -1,0 +1,77 @@
+1) Data collection description. How did you collect data? Is it a sample? How did you decide on your sample?
+
+The Gross Domestic Product per capita was taken from the World Bank(https://databank.worldbank.org/source/world-development-indicators) and CO2 consumption data was taken from Macrotrends (https://www.macrotrends.net).
+
+The data consists of 36 countries, it is selected using the stratified sampling method. 
+
+--------------------------------------------------------------------------------------
+
+2) Data analyses using different diagrams, charts and sample statistics for all your inputs and outputs.
+
+I have five number summary, outlier analysis
+
+I have a barplot and a box plot
+
+--------------------------------------------------------------------------------------
+
+3) Normality test for your data
+
+GDPs, based on the Shapiro-Wilk test, we can say that the distribution is normal with %99 confidence.
+(W = 0.85373, p-value = 0.0002322)
+
+CO2s, based on the Shapiro-Wilk test, we can say that the distribution is normal with %99.99 confidence.
+(W = 0.77696, p-value = 5.862e-06)
+--------------------------------------------------------------------------------------
+
+4) Point estimations and confidence intervals.
+
+I have points estimations from the 2. question.
+
+Confidence intervals with %95 confidence for GPDs: 
+	11878.5 < mean < 22134.54
+	12120.73 < std < 19493.41 
+
+Confidence intervals with %99 confidence for CO2:
+	4336.085 < mean < 10814.95
+	5437.641 < std < 10181.63  
+
+--------------------------------------------------------------------------------------
+
+5) Define 2-3 hypotheses and test for them. These may be one sample or two sample hypothesis tests. (Is the average height of basketball players > 2 meters? Are shorter football players’ average incomes higher compared to taller players? How about the standard deviation of incomes? etc…)
+
+Hypothesis 1 was normality test
+
+Hypothesis 2: H0, mean GDP = 12000 and H1, mean GDP > 12000
+p-value obtained from t-test is 0.01888 which is less than alpha 0.05, we reject the null hypothesis.
+
+Hypothesis 3: H0 mean co2 = 4000 and H1, mean CO2 > 4000
+p-value obtained from t-test is 0.002434 which is less than alpha 0.01, we reject the null hypothesis.
+
+--------------------------------------------------------------------------------------
+
+6) Goodness of fit tests and other checks for detecting the distribution.
+
+For GDPs, null hypothesis was that every category has the same expected count probability, with X-squared = 20.667, df = 2, p-value = 3.253e-05, we reject the null hypothesis with %99 confidence.
+
+For CO2s, null hypothesis was that every category has the same expected count probability, with X-squared = 56.667, df = 2, p-value = 3.027e-12, we reject the null hypothesis with %99 confidence.
+
+--------------------------------------------------------------------------------------
+
+7) Regression Analysis
+
+The regression line for a GDP vs CO2 plot (With All Values):
+
+	y = 1599.07365679723 + 0.351420816878188x, where y is CO2 and x is GDP
+	R = 0.735948657452193 , R-squared = 0.5281 
+	F-statistic: 40.17 on 1 and 34 DF,  p-value: 3.143e-07
+
+The regression line for a GDP vs CO2 plot (With Outliers Removed):
+
+	y = 2523.85475126023 + 0.258347779359643x, where y is CO2 and x is GDP
+	R = 0.757695202390443, R-squared = 0.5612
+	F-statistic: 44.48 on 1 and 33 DF,  p-value: 1.363e-07
+
+
+
+
+

@@ -1,0 +1,16 @@
+			Countrycodes with their CO2 consumptions in kilograms per capita
+	SD         NG         IN         PE         NA         MA         BR         EG         CU         TH         CL 
+  342.5633   689.3867  1119.6567  1276.8633  1347.9586  1383.9633  1833.7000  1943.5467  2395.4367  3022.0833  3614.3533 
+        TR         AR         MX         CN         PT         VE         IR         IT         NZ         GR         AT 
+ 3630.0967  3725.1033  3834.7867  4550.0533  5132.8600  5279.6500  5963.5800  6935.8933  7267.0367  7779.9833  7991.6500 
+        GB         PL         IL         JP         KR         DE         FI         RU         EE         SA         CA 
+ 8161.4900  8218.8233  8405.9967  9225.2133  9924.5967  9940.8933 10583.4667 11468.6933 12925.4233 13307.1667 15921.1467 
+        AU         US         QA 
+16883.0233 18151.3933 38541.1533 
+
+				Five Number Summary and Additional Statistics
+
+Min.   1st Qu.  Median  3rd Qu.  Max. 			Mean     Std	   IQR
+342.6  2865.4   6449.7  9928.7   38541.2 		7575.5   7135.827  7063.3
+
+According to the IQR rule for outliers, countries in the range of (Q1 - 1.5 * IQR, Q3 + 1.5 * IQR) are outliers. This range is (-7729.55 , 20523.65), so QA (qatar) will be considered an outlier.
