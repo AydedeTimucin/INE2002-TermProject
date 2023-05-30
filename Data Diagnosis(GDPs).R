@@ -27,7 +27,7 @@ segments(x0 = 9005.2, y0 = 0, x1 = 9005.2, y1 = 100, lty = "dotted") # Median
 segments(x0 = 984.9, y0 = 0, x1 = 984.9, y1 = 100, lty = "dotted") # Min
 segments(x0 = 47714.2, y0 = 0, x1 = 47714.2, y1 = 100, lty = "dotted") # Max
 
-## Normality Test
+## Normality Test (1, 1), (2, 3), (3, 4), (4, 5)
 
 print(shapiro.test(GDPs))
 
@@ -99,6 +99,23 @@ expected_frequencies <- expected_proportions * total
 result <- chisq.test(hist_data$counts, p = expected_proportions)
 
 print(result)
+
+## Sign Test
+
+deviations <- GDPs - 12000
+
+deviations <- deviations[deviations != 0]
+
+positive_count <- sum(deviations > 0)
+negative_count <- sum(deviations < 0)
+
+count_smaller <- min(positive_count, negative_count)
+
+test_value = ((count_smaller + 0.5) -0.5*length(GDPs)) / (sqrt(length(GDPs))/2)
+critical_value <- qnorm(1 - 0.05/2)
+
+print(test_value)
+print(critical_value)
 
 
 

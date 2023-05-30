@@ -99,4 +99,26 @@ result <- chisq.test(hist_data$counts, p = expected_proportions)
 
 print(result)
 
+## Sign Test
+
+deviations <- scaled_CO2s - 12000
+
+deviations <- deviations[deviations != 0]
+
+positive_count <- sum(deviations > 0)
+negative_count <- sum(deviations < 0)
+
+count_smaller <- min(positive_count, negative_count)
+
+test_value = ((count_smaller + 0.5) -0.5*length(scaled_CO2s)) / (sqrt(length(scaled_CO2s))/2)
+critical_value <- qnorm(1 - 0.05/2)
+
+print(test_value)
+print(critical_value)
+
+
+
+
+
+
 

@@ -71,6 +71,53 @@ The regression line for a GDP vs CO2 plot (With Outliers Removed):
 	R = 0.757695202390443, R-squared = 0.5612
 	F-statistic: 44.48 on 1 and 33 DF,  p-value: 1.363e-07
 
+--------------------------------------------------------------------------------------
+
+8) ANOVA
+
+As we only have 2 groups, we can only use one-way ANOVA. 
+
+Df    Sum Sq   Mean Sq F value  Pr(>F)   
+group        1 1.601e+09 1.601e+09   11.68 0.00106 **
+Residuals   70 9.598e+09 1.371e+08  
+                 
+As expected, there are significant differences between the groups, which means they can't explain each other that well.
+
+When we run Tukey Test with 95 confidence:
+
+diff      lwr      upr     p adj
+GDPs-CO2s 9431.002 3926.285 14935.72 0.0010584
+
+--------------------------------------------------------------------------------------
+
+8) Non-parametric tests
+
+Results of Sign Test with alpha = 0.05:
+
+	For GDPs, lets pick 12000 as the hypot. median, then:
+	17(-), 19(+), z_value = -0.17, -1.959964 < critical zone < 1.959964 which means we cannot reject the null hypothesis
+	
+	For CO2s, lets pick 12000 as well, then:
+	6(-), 30(+), z_value = -3.83, -1.959964 < critical zone < 1.959964 which means we should reject the null hypothesis
+	
+
+Results of Wilcoxon Rank Sum Test wtih 
+
+	W = 867, p-value = 0.01324, which means they don't have the same distribution.
+	
+Spearman Rank Correlation Coefficient
+
+	S = 1230, p-value = 5.651e-08, rho = 0.8416988, which means there is a clear linear relation.
+
+
+
+
+
+
+
+
+
+
 
 
 
