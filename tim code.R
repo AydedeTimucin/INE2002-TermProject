@@ -113,3 +113,20 @@ for (country in country_names) {
   
   abline(model, col = "red")
 }
+
+
+# Convert the vectors to data frames
+data <- data.frame(gdp_means, co2_means)
+
+# Create a binary variable indicating whether a country is high-income or low-income
+data$income <- ifelse(data$gdp_means > 20000, "High Income", "Low Income")
+
+# Subset the data for high-income and low-income countries
+high_income_data <- data[data$income == "High Income", ]
+low_income_data <- data[data$income == "Low Income", ]
+
+# Perform the t-test
+result <- t.test(high_income_data$co2_means, low_income_data$co2_means)
+
+# Print the result
+print(result)
